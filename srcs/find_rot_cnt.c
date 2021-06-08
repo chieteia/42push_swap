@@ -45,9 +45,7 @@ int	find_rot_cnt_to_end(t_admin *master, t_stack *node, char stack_name)
 	}
 	return (rot_cnt);
 }
-int		find_rot_cnt_to_top(t_admin *master, t_stack *node, char stack_name);
-int		find_rrot_cnt_to_top(t_admin *master, t_stack *node, char stack_name);
-int	find_rot_cnt_to_end(t_admin *master, t_stack *node, char stack_name);
+
 int		find_rrot_cnt_to_end(t_admin *master, t_stack *node, char stack_name)
 {
 	t_stack	*end;
