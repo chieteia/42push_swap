@@ -55,7 +55,7 @@ void	sort_asc_len5(t_admin *master, char src_name, char dst_name)
 
 	if (stacklen(master, src_name) == 3)
 	{
-		sort_reverse_len2(master, dst_name);
+		sort_desc_len2(master, dst_name);
 		sort_asc_len3(master, src_name);
 		return ;
 	}
@@ -78,7 +78,7 @@ void	sort_asc_len6(t_admin *master, char src_name, char dst_name)
 
 	if (stacklen(master, src_name) == 3)
 	{
-		sort_reverse_len3(master, dst_name);
+		sort_desc_len3(master, dst_name);
 		sort_asc_len3(master, src_name);
 		return ;
 	}

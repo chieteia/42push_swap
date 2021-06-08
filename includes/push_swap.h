@@ -72,11 +72,43 @@ int		is_desc_sorted(t_admin *master, char stack_name);
 int		min(int a, int b);
 int		max(int a, int b);
 
+void	move_node_to_end(t_admin *master, t_stack *node, char stack_name);
+
 t_stack	*plug_top_ptr(t_admin *master, char stack_name);
 t_stack	*plug_end_ptr(t_admin *master, char stack_name);
 int		plug_stack_len(t_admin *master, char stack_name);
 
+void	push_first_chunk_half(t_admin *master, char src_name, char dst_name);
+void	push_second_chunk_half(t_admin *master, char src_name, char dst_name);
+
+void	push_first_chunk(t_admin *master, char src_name, char dst_name);
+void	push_second_chunk(t_admin *master, char src_name, char dst_name);
+void	push_third_chunk(t_admin *master, char src_name, char dst_name);
+void	push_fourth_chunk(t_admin *master, char src_name, char dst_name);
+
 void	quick_sort(int *array, int left, int right);
+
+int		get_range_half(t_admin *master, char src_name, int chunk);
+int		get_range_quarter(t_admin *master, char src_name, int chunk);
+
+void	sort_6_or_less(t_admin *master, char src_name, char dst_name);
+
+void	sort_asc_len2(t_admin *master, char stack_name);
+void	sort_asc_len3(t_admin *master, char stack_name);
+void	sort_asc_len4(t_admin *master, char src_name, char dst_name);
+void	sort_asc_len5(t_admin *master, char src_name, char dst_name);
+void	sort_asc_len6(t_admin *master, char src_name, char dst_name);
+
+void	sort_desc_len2(t_admin *master, char stack_name);
+void	sort_desc_len3(t_admin *master, char stack_name);
+
+void	sort_first_chunk_half(t_admin *master, char src_name, char dst_name);
+void	sort_second_chunk_half(t_admin *master, char src_name, char dst_name);
+
+void	sort_first_chunk(t_admin *master, char src_name, char dst_name);
+void	sort_second_chunk(t_admin *master, char src_name, char dst_name);
+void	sort_third_chunk(t_admin *master, char src_name, char dst_name);
+void	sort_fourth_chunk(t_admin *master, char src_name, char dst_name);
 
 void	push_top(t_admin *master, int num, char stack_name);
 void	push_end(t_admin *master, int num, char stack_name);
