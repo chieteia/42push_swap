@@ -1,0 +1,1 @@
+ls srcs/*.c libft/*.c | tr '\n' ' ' | xargs gcc -g test.c
