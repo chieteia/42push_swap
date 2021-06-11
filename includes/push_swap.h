@@ -2,6 +2,7 @@
 # define PUSH_SWAP_H
 
 # include "struct.h"
+# include "libft.h"
 
 # define PRINT_OK 1
 # define NOT_PRINT 0
@@ -20,7 +21,7 @@
 
 void	admin_free(t_admin *master);
 
-void	push_argv_to_stack_a(t_admin *master);
+void	push_argv_to_stack(t_admin *master, char stack_name);
 
 void	error_exit(t_admin *master);
 
@@ -102,9 +103,11 @@ void	sort_asc_len6(t_admin *master, char src_name, char dst_name);
 void	sort_desc_len2(t_admin *master, char stack_name);
 void	sort_desc_len3(t_admin *master, char stack_name);
 
+void	sort_half(t_admin *master, char src_name, char dst_name);
 void	sort_first_chunk_half(t_admin *master, char src_name, char dst_name);
 void	sort_second_chunk_half(t_admin *master, char src_name, char dst_name);
 
+void	sort_quarter(t_admin *master, char src_name, char dst_name);
 void	sort_first_chunk(t_admin *master, char src_name, char dst_name);
 void	sort_second_chunk(t_admin *master, char src_name, char dst_name);
 void	sort_third_chunk(t_admin *master, char src_name, char dst_name);
