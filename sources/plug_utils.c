@@ -8,7 +8,7 @@ t_stack	*plug_top_ptr(t_admin *master, char stack_name)
 		return (master->stack_b);
 }
 
-t_stack *plug_end_ptr(t_admin *master, char stack_name)
+t_stack	*plug_end_ptr(t_admin *master, char stack_name)
 {
 	if (stack_name == 'a')
 		return (master->stack_a->prev);

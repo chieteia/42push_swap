@@ -9,10 +9,12 @@ int	find_rot_cnt_from_top(t_admin *master, char stack_name, int order)
 		while (stack->num >= master->first_quartile)
 			stack = stack->next;
 	if (order == SECOND)
-		while ((stack->num < master->first_quartile) || (stack->num >= master->median))
+		while ((stack->num < master->first_quartile)
+			|| (stack->num >= master->median))
 			stack = stack->next;
 	if (order == THIRD)
-		while ((stack->num < master->median) || (stack->num >= master->third_quartile))
+		while ((stack->num < master->median)
+			|| (stack->num >= master->third_quartile))
 			stack = stack->next;
 	if (order == FOURTH)
 		while (stack->num < master->third_quartile)
@@ -35,10 +37,12 @@ int	find_rrot_cnt_from_end(t_admin *master, char stack_name, int order)
 		while (stack->num >= master->first_quartile)
 			stack = stack->prev;
 	if (order == SECOND)
-		while ((stack->num < master->first_quartile) || (stack->num >= master->median))
+		while ((stack->num < master->first_quartile)
+			|| (stack->num >= master->median))
 			stack = stack->prev;
 	if (order == THIRD)
-		while ((stack->num < master->median) || (stack->num >= master->third_quartile))
+		while ((stack->num < master->median)
+			|| (stack->num >= master->third_quartile))
 			stack = stack->prev;
 	if (order == FOURTH)
 		while (stack->num < master->third_quartile)

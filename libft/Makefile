@@ -54,26 +54,30 @@ SRCS		=	$(addprefix $(SRCS_DIR)/,$(SRCS_FILES))
 OBJS		=	$(addprefix $(OBJ_DIR)/,$(SRCS_FILES:.c=.o))
 OBJ_DIR		=	./objects
 
+RED			=	"\033[31m"
+GREEN		=	"\033[32m"
+YELLOW		=	"\033[33m"
+RESET		=	"\033[0m"
+
 .PHONY: all clean fclean re
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "CREATED: $@"
 	@ar rcs $(NAME) $(OBJS)
-	@echo "@@ DONE @@"
+	@echo $(YELLOW)"@@@@@ libft.a created @@@@@"$(RESET)
 
 ## オブジェクトファイルの主力先を変えている
-$(OBJ_DIR)/%.o: $(SRCS)
-	@echo "COMPILING: $@"
+$(OBJ_DIR)/%.o: $(SRCS_DIR)/%.c
+	@echo $(GREEN)"Creating: $@"$(RESET)
 	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -I./includes/ -c -o $@ $<
 
 clean:
 	@$(RM_DIR) $(OBJ_DIR)
-	@echo "REMOVE LIBFT OBJECT FILES"
+	@echo $(RED)"REMOVE LIBFT OBJECT FILES"$(RESET)
 
 fclean:	clean
 	@$(RM) $(NAME)
-	@echo "REMOVE $(NAME)"
+	@echo $(RED)"REMOVE $(NAME)"$(RESET)
 
 re:	fclean all

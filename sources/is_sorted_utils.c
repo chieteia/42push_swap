@@ -2,8 +2,8 @@
 
 int	is_asc_sorted(t_admin *master, char stack_name)
 {
-	t_stack *top;
-	t_stack *tmp;
+	t_stack	*top;
+	t_stack	*tmp;
 
 	top = plug_top_ptr(master, stack_name);
 	tmp = top;
@@ -18,8 +18,8 @@ int	is_asc_sorted(t_admin *master, char stack_name)
 
 int	is_desc_sorted(t_admin *master, char stack_name)
 {
-	t_stack *top;
-	t_stack *tmp;
+	t_stack	*top;
+	t_stack	*tmp;
 
 	top = plug_top_ptr(master, stack_name);
 	tmp = top;

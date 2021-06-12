@@ -1,10 +1,10 @@
 #include "push_swap.h"
 
-void push_first_chunk(t_admin *master, char src_name, char dst_name)
+void	push_first_chunk(t_admin *master, char src_name, char dst_name)
 {
-	int rot_cnt;
-	int rrot_cnt;
-	int range;
+	int	rot_cnt;
+	int	rrot_cnt;
+	int	range;
 
 	range = get_range_quarter(master, src_name, FIRST);
 	while (range--)
@@ -19,12 +19,12 @@ void push_first_chunk(t_admin *master, char src_name, char dst_name)
 	}
 }
 
-void push_second_chunk(t_admin *master, char src_name, char dst_name)
+void	push_second_chunk(t_admin *master, char src_name, char dst_name)
 {
-	t_stack *old_end;
-	int rot_cnt;
-	int rrot_cnt;
-	int range;
+	t_stack	*old_end;
+	int		rot_cnt;
+	int		rrot_cnt;
+	int		range;
 
 	range = get_range_quarter(master, src_name, SECOND);
 	old_end = plug_end_ptr(master, src_name);
@@ -41,12 +41,12 @@ void push_second_chunk(t_admin *master, char src_name, char dst_name)
 	move_node_to_end(master, old_end, src_name);
 }
 
-void push_third_chunk(t_admin *master, char src_name, char dst_name)
+void	push_third_chunk(t_admin *master, char src_name, char dst_name)
 {
-	t_stack *old_end;
-	int rot_cnt;
-	int rrot_cnt;
-	int range;
+	t_stack	*old_end;
+	int		rot_cnt;
+	int		rrot_cnt;
+	int		range;
 
 	range = get_range_quarter(master, src_name, THIRD);
 	old_end = plug_end_ptr(master, src_name);
@@ -63,11 +63,11 @@ void push_third_chunk(t_admin *master, char src_name, char dst_name)
 	move_node_to_end(master, old_end, src_name);
 }
 
-void push_fourth_chunk(t_admin *master, char src_name, char dst_name)
+void	push_fourth_chunk(t_admin *master, char src_name, char dst_name)
 {
-	int rot_cnt;
-	int rrot_cnt;
-	int range;
+	int	rot_cnt;
+	int	rrot_cnt;
+	int	range;
 
 	range = get_range_quarter(master, src_name, FOURTH);
 	while (range--)

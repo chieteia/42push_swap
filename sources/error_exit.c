@@ -1,8 +1,7 @@
 #include "push_swap.h"
 
-void	error_exit(t_admin *master)
+void	error_exit(void)
 {
-	write(2, "Error\n", 7);
-	admin_free(master);
+	ft_putstr_fd("Error\n", 2);
 	exit(1);
 }

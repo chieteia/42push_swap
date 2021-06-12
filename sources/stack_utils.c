@@ -14,7 +14,7 @@ void	push_top(t_admin *master, int num, char stack_name)
 	else
 	{
 		if (!ft_malloc((void **)&new, sizeof(t_stack), 1))
-			error_exit(master);
+			error_exit();
 		new->next = *stack;
 		new->prev = (*stack)->prev;
 		(*stack)->prev->next = new;
@@ -38,7 +38,7 @@ void	push_end(t_admin *master, int num, char stack_name)
 	else
 	{
 		if (!ft_malloc((void **)&new, sizeof(t_stack), 1))
-			error_exit(master);
+			error_exit();
 		new->next = *stack;
 		new->prev = (*stack)->prev;
 		(*stack)->prev->next = new;
@@ -49,8 +49,8 @@ void	push_end(t_admin *master, int num, char stack_name)
 
 void	pop_top(t_admin *master, char stack_name)
 {
-	t_stack **stack;
-	t_stack *tmp;
+	t_stack	**stack;
+	t_stack	*tmp;
 
 	if (stack_name == 'a')
 		stack = &master->stack_a;
@@ -71,10 +71,10 @@ void	pop_top(t_admin *master, char stack_name)
 	}
 }
 
-int		stacklen(t_admin* master, char stack_name)
+int	stacklen(t_admin *master, char stack_name)
 {
 	int		stack_len;
-	t_stack *tmp;
+	t_stack	*tmp;
 	t_stack	*end;
 
 	stack_len = 0;

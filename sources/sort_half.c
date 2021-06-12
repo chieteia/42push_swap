@@ -2,10 +2,10 @@
 
 void	sort_first_chunk_half(t_admin *master, char src_name, char dst_name)
 {
-	t_stack *stack;
-	int smallest_rot_cnt;
-	int biggest_rot_cnt;
-	int biggest_cnt;
+	t_stack	*stack;
+	int		smallest_rot_cnt;
+	int		biggest_rot_cnt;
+	int		biggest_cnt;
 
 	biggest_cnt = 0;
 	push_first_chunk_half(master, src_name, dst_name);
@@ -28,10 +28,10 @@ void	sort_first_chunk_half(t_admin *master, char src_name, char dst_name)
 
 void	sort_second_chunk_half(t_admin *master, char src_name, char dst_name)
 {
-	t_stack *stack;
-	int smallest_rot_cnt;
-	int biggest_rot_cnt;
-	int biggest_cnt;
+	t_stack	*stack;
+	int		smallest_rot_cnt;
+	int		biggest_rot_cnt;
+	int		biggest_cnt;
 
 	biggest_cnt = 0;
 	push_second_chunk_half(master, src_name, dst_name);

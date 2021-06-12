@@ -3,6 +3,7 @@
 
 # include "struct.h"
 # include "libft.h"
+# include "get_next_line.h"
 
 # define PRINT_OK 1
 # define NOT_PRINT 0
@@ -19,11 +20,13 @@
 # define HALF_FIRST 5
 # define HALF_SECOND 6
 
+void	remake_args(int argc, char **argv, int *new_argc, char ***new_argv);
+
 void	admin_free(t_admin *master);
 
 void	push_argv_to_stack(t_admin *master, char stack_name);
 
-void	error_exit(t_admin *master);
+void	error_exit(void);
 
 void	exec_pa(t_admin *master, int print_flag);
 void	exec_pb(t_admin *master, int print_flag);
@@ -46,7 +49,7 @@ void	exec_reverse_rotate(t_admin *master, char stack_name, int print_flag);
 void	exec_swap(t_admin *master, char stack_name, int print_flag);
 void	exec_loop(t_admin *master, int command, char stack_name, int count);
 
-t_stack *find_biggest(t_admin *master, char stack_name);
+t_stack	*find_biggest(t_admin *master, char stack_name);
 int		find_biggest_move(t_admin *master, char stack_name);
 void	biggest_move(t_admin *master, char src_name, char dst_name, int count);
 

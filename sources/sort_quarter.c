@@ -2,10 +2,10 @@
 
 void	sort_first_chunk(t_admin *master, char src_name, char dst_name)
 {
-	t_stack *stack;
-	int smallest_rot_cnt;
-	int biggest_rot_cnt;
-	int biggest_cnt;
+	t_stack	*stack;
+	int		smallest_rot_cnt;
+	int		biggest_rot_cnt;
+	int		biggest_cnt;
 
 	biggest_cnt = 0;
 	push_first_chunk(master, src_name, dst_name);
@@ -28,10 +28,10 @@ void	sort_first_chunk(t_admin *master, char src_name, char dst_name)
 
 void	sort_second_chunk(t_admin *master, char src_name, char dst_name)
 {
-	t_stack *stack;
-	int smallest_rot_cnt;
-	int biggest_rot_cnt;
-	int biggest_cnt;
+	t_stack	*stack;
+	int		smallest_rot_cnt;
+	int		biggest_rot_cnt;
+	int		biggest_cnt;
 
 	biggest_cnt = 0;
 	push_second_chunk(master, src_name, dst_name);
@@ -54,10 +54,10 @@ void	sort_second_chunk(t_admin *master, char src_name, char dst_name)
 
 void	sort_third_chunk(t_admin *master, char src_name, char dst_name)
 {
-	t_stack *stack;
-	int smallest_rot_cnt;
-	int biggest_rot_cnt;
-	int biggest_cnt;
+	t_stack	*stack;
+	int		smallest_rot_cnt;
+	int		biggest_rot_cnt;
+	int		biggest_cnt;
 
 	biggest_cnt = 0;
 	push_third_chunk(master, src_name, dst_name);
@@ -80,10 +80,10 @@ void	sort_third_chunk(t_admin *master, char src_name, char dst_name)
 
 void	sort_fourth_chunk(t_admin *master, char src_name, char dst_name)
 {
-	t_stack *stack;
-	int smallest_rot_cnt;
-	int biggest_rot_cnt;
-	int biggest_cnt;
+	t_stack	*stack;
+	int		smallest_rot_cnt;
+	int		biggest_rot_cnt;
+	int		biggest_cnt;
 
 	biggest_cnt = 0;
 	push_fourth_chunk(master, src_name, dst_name);

@@ -1,9 +1,9 @@
 #include "push_swap.h"
 
-int get_range_half(t_admin *master, char src_name, int chunk)
+int	get_range_half(t_admin *master, char src_name, int chunk)
 {
-	int range;
-	int stack_len;
+	int	range;
+	int	stack_len;
 
 	range = 0;
 	stack_len = plug_stack_len(master, src_name);
@@ -14,10 +14,10 @@ int get_range_half(t_admin *master, char src_name, int chunk)
 	return (range);
 }
 
-int get_range_quarter(t_admin *master, char src_name, int chunk)
+int	get_range_quarter(t_admin *master, char src_name, int chunk)
 {
-	int range;
-	int stack_len;
+	int	range;
+	int	stack_len;
 
 	range = 0;
 	stack_len = plug_stack_len(master, src_name);

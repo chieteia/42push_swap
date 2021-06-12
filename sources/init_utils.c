@@ -1,28 +1,24 @@
 #include "push_swap.h"
 
-void init_stack(t_admin *master, int num, char stack_name)
+void	init_stack(t_admin *master, int num, char stack_name)
 {
-	t_stack **stack;
+	t_stack	**stack;
 
 	if (stack_name == 'a')
 		stack = &master->stack_a;
 	else
 		stack = &master->stack_b;
 	if (!ft_malloc((void **)stack, sizeof(t_stack), 1))
-		error_exit(master);
+		error_exit();
 	(*stack)->prev = *stack;
 	(*stack)->next = *stack;
 	(*stack)->num = num;
 }
 
-void init_admin(t_admin **master, int argc, char **argv)
+void	init_admin(t_admin **master, int argc, char **argv)
 {
 	if (!ft_malloc((void **)master, sizeof(t_admin), 1))
-	{
-		write(2, "Error\n", 7);
-		exit(1);
-	}
-	//master = &(t_admin){.args.cnt = argc, .args.vec = argv};
+		error_exit();
 	(*master)->stack_a = NULL;
 	(*master)->stack_b = NULL;
 	(*master)->args.cnt = argc;

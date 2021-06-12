@@ -1,20 +1,20 @@
 #ifndef STRUCT_H
 # define STRUCT_H
 
-typedef struct	s_args
+typedef struct s_args
 {
 	int		cnt;
 	char	**vec;
 }				t_args;
 
-typedef struct	s_stack
+typedef struct s_stack
 {
 	int				num;
 	struct s_stack	*prev;
 	struct s_stack	*next;
 }				t_stack;
 
-typedef struct	s_admin
+typedef struct s_admin
 {
 	struct s_stack	*stack_a;
 	struct s_stack	*stack_b;

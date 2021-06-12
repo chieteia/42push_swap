@@ -2,7 +2,7 @@
 
 void	sort_desc_len2(t_admin *master, char stack_name)
 {
-	t_stack *stack;
+	t_stack	*stack;
 
 	stack = plug_top_ptr(master, stack_name);
 	if (stack->num < stack->next->num)
@@ -11,7 +11,7 @@ void	sort_desc_len2(t_admin *master, char stack_name)
 
 void	sort_desc_len3(t_admin *master, char stack_name)
 {
-	t_stack *stack;
+	t_stack	*stack;
 	t_stack	*smallest;
 
 	smallest = find_smallest(master, stack_name);

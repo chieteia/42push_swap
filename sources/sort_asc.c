@@ -2,7 +2,7 @@
 
 void	sort_asc_len2(t_admin *master, char stack_name)
 {
-	t_stack *stack;
+	t_stack	*stack;
 
 	stack = plug_top_ptr(master, stack_name);
 	if (stack->num > stack->next->num)
@@ -11,7 +11,7 @@ void	sort_asc_len2(t_admin *master, char stack_name)
 
 void	sort_asc_len3(t_admin *master, char stack_name)
 {
-	t_stack *stack;
+	t_stack	*stack;
 	t_stack	*biggest;
 
 	biggest = find_biggest(master, stack_name);
@@ -29,7 +29,7 @@ void	sort_asc_len3(t_admin *master, char stack_name)
 
 void	sort_asc_len4(t_admin *master, char src_name, char dst_name)
 {
-	int smallest_move_cnt;
+	int	smallest_move_cnt;
 
 	if (stacklen(master, src_name) == 3)
 	{
@@ -48,8 +48,8 @@ void	sort_asc_len4(t_admin *master, char src_name, char dst_name)
 
 void	sort_asc_len5(t_admin *master, char src_name, char dst_name)
 {
-	int rot_cnt;
-	int rrot_cnt;
+	int	rot_cnt;
+	int	rrot_cnt;
 
 	if (stacklen(master, src_name) == 3)
 	{
@@ -70,8 +70,8 @@ void	sort_asc_len5(t_admin *master, char src_name, char dst_name)
 
 void	sort_asc_len6(t_admin *master, char src_name, char dst_name)
 {
-	int rot_cnt;
-	int rrot_cnt;
+	int	rot_cnt;
+	int	rrot_cnt;
 
 	if (stacklen(master, src_name) == 3)
 	{

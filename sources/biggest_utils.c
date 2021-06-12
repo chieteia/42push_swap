@@ -5,7 +5,7 @@ t_stack	*find_biggest(t_admin *master, char stack_name)
 	int		max_num;
 	t_stack	*tmp;
 	t_stack	*end;
-	t_stack *res;
+	t_stack	*res;
 
 	max_num = -2147483648;
 	tmp = plug_top_ptr(master, stack_name);
@@ -30,9 +30,9 @@ t_stack	*find_biggest(t_admin *master, char stack_name)
 
 int	find_biggest_move(t_admin *master, char stack_name)
 {
-	t_stack *biggest;
-	int rot_cnt;
-	int rrot_cnt;
+	t_stack	*biggest;
+	int		rot_cnt;
+	int		rrot_cnt;
 
 	biggest = find_biggest(master, stack_name);
 	rot_cnt = find_rot_cnt_to_top(master, biggest, stack_name);
