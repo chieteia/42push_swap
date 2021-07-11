@@ -9,37 +9,7 @@ LIBFT		=	$(LIB_DIR)libft.a
 RM			=	rm -f
 RM_DIR		=	rm -rf
 
-SRCS_FILES	=	checker.c \
-				push_swap.c \
-				admin_free.c \
-				argv_utils.c \
-				biggest_utils.c \
-				error_exit.c \
-				exec_utils.c \
-				find_rot_cnt.c \
-				find_utils.c \
-				get_quartile.c \
-				init_utils.c \
-				is_sorted_utils.c \
-				math_utils.c \
-				move_node_to_end.c \
-				plug_utils.c \
-				push_half.c \
-				push_quarter.c \
-				push_utils.c \
-				quick_sort.c \
-				range.c \
-				remake_args.c \
-				reverse_rotate_utils.c \
-				rotate_utils.c \
-				smallest_utils.c \
-				sort_6_or_less.c \
-				sort_asc.c \
-				sort_desc.c \
-				sort_half.c \
-				sort_quarter.c \
-				stack_utils.c \
-				swap_utils.c
+SRCS_FILES	=	${shell find *.c} 
 
 OBJ_FILES	=	$(SRCS_FILES:.c=.o)
 
