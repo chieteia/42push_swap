@@ -5,6 +5,7 @@ typedef struct s_args
 {
 	int		cnt;
 	char	**vec;
+	int		is_malloc;
 }				t_args;
 
 typedef struct s_stack

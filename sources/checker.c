@@ -42,12 +42,9 @@ static void	checker(int argc, char **argv)
 	char	*line;
 	int		res;
 	t_admin	*master;
-	char	**new_argv;
-	int		new_argc;
 
 	line = NULL;
-	remake_args(argc, argv, &new_argc, &new_argv);
-	init_admin(&master, new_argc, new_argv);
+	init_admin(&master, remake_args(argc, argv));
 	push_argv_to_stack(master, 'a');
 	res = get_next_line(0, &line);
 	while (res >= 0)

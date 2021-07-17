@@ -10,21 +10,23 @@ static int	find_argv_size(char **argv)
 	return (res);
 }
 
-void	remake_args(int argc, char **argv, int *new_argc, char ***new_argv)
+t_args	remake_args(int argc, char **argv)
 {
+	t_args	arg;
+
 	if (argc == 2)
 	{
-		*new_argv = ft_split(argv[1], ' ');
-		if (!(*new_argv))
-		{
-			ft_putstr_fd("Error\n", 2);
-			exit(1);
-		}
-		*new_argc = find_argv_size(*new_argv);
+		arg.vec = ft_split(argv[1], ' ');
+		if (!(arg.vec))
+			error_exit();
+		arg.cnt = find_argv_size(arg.vec);
+		arg.is_malloc = TRUE;
 	}
 	else
 	{
-		*new_argv = &argv[1];
-		*new_argc = argc - 1;
+		arg.vec = &argv[1];
+		arg.cnt = argc - 1;
+		arg.is_malloc = FALSE;
 	}
+	return (arg);
 }

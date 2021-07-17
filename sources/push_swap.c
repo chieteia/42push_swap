@@ -3,12 +3,9 @@
 static void	push_swap(int argc, char **argv)
 {
 	t_admin	*master;
-	char	**new_argv;
-	int		new_argc;
 	int		stack_len;
 
-	remake_args(argc, argv, &new_argc, &new_argv);
-	init_admin(&master, new_argc, new_argv);
+	init_admin(&master, remake_args(argc, argv));
 	push_argv_to_stack(master, 'a');
 	get_quartile(master, 'a');
 	stack_len = stacklen(master, 'a');

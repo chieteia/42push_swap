@@ -20,7 +20,7 @@
 # define HALF_FIRST 5
 # define HALF_SECOND 6
 
-void	remake_args(int argc, char **argv, int *new_argc, char ***new_argv);
+t_args	remake_args(int argc, char **argv);
 
 void	admin_free(t_admin *master);
 
@@ -68,7 +68,7 @@ int		find_rrot_cnt_from_end(t_admin *master, char stack_name, int order);
 void	get_quartile(t_admin *master, char stack_name);
 
 void	init_stack(t_admin *master, int num, char stack_name);
-void	init_admin(t_admin **master, int argc, char **argv);
+void	init_admin(t_admin **master, t_args arg);
 
 int		is_asc_sorted(t_admin *master, char stack_name);
 int		is_desc_sorted(t_admin *master, char stack_name);

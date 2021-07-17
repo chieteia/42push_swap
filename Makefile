@@ -1,7 +1,7 @@
 PUSH_SWAP	=	push_swap
 CHECKER		=	checker
 CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -g
 INCLUDES	=	$(addprefix -I, $(HEADERS))
 HEADERS		=	$(INC_DIR)includes/ $(LIB_DIR)includes/
 LIBFT		=	$(LIB_DIR)libft.a

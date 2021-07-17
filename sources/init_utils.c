@@ -15,14 +15,13 @@ void	init_stack(t_admin *master, int num, char stack_name)
 	(*stack)->num = num;
 }
 
-void	init_admin(t_admin **master, int argc, char **argv)
+void	init_admin(t_admin **master, t_args arg)
 {
 	if (!ft_malloc((void **)master, sizeof(t_admin), 1))
 		error_exit();
 	(*master)->stack_a = NULL;
 	(*master)->stack_b = NULL;
-	(*master)->args.cnt = argc;
-	(*master)->args.vec = argv;
+	(*master)->args = arg;
 	(*master)->stack_a_len = 0;
 	(*master)->stack_b_len = 0;
 	(*master)->smallest_rot_flag = 0;

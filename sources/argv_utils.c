@@ -57,13 +57,13 @@ static void	chack_argv(t_admin *master, char stack_name)
 	while (index < master->args.cnt)
 	{
 		argv = master->args.vec[index++];
-		argv_num = ft_atoi(argv);
 		if (*argv == '-' && !ft_isdigit(*(++argv)))
 			error_exit();
 		if (!ft_isnumber(argv))
 			error_exit();
 		if (ft_is_overflow(argv))
 			error_exit();
+		argv_num = ft_atoi(argv);
 		push_end(master, argv_num, stack_name);
 	}
 	check_duplicate(master);
