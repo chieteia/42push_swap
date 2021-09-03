@@ -26,7 +26,6 @@ static void	check_command(t_admin *master, char *line)
 		exec_rrr(master, NOT_PRINT);
 	else
 		error_exit();
-	safe_free((void **)&line);
 }
 
 static void	print_result(t_admin *master)
@@ -46,17 +45,17 @@ static void	checker(int argc, char **argv)
 	line = NULL;
 	init_admin(&master, remake_args(argc, argv));
 	push_argv_to_stack(master, 'a');
-	res = get_next_line(0, &line);
-	while (res >= 0)
+	while (1)
 	{
+		res = get_next_line(0, &line);
+		if (res == -1)
+			error_exit();
 		if (*line)
 			check_command(master, line);
+		safe_free((void **)&line);
 		if (res == 0)
 			break ;
-		res = get_next_line(0, &line);
 	}
-	if (res == -1)
-		error_exit();
 	print_result(master);
 	admin_free(master);
 }
