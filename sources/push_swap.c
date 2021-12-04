@@ -13,8 +13,6 @@ static void	push_swap(int argc, char **argv)
 	{
 		if (stack_len <= 6)
 			sort_6_or_less(master, 'a', 'b');
-		else if (stack_len <= 100)
-			sort_half(master, 'a', 'b');
 		else
 			sort_quarter(master, 'a', 'b');
 	}
