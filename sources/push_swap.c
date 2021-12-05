@@ -3,18 +3,17 @@
 static void	push_swap(int argc, char **argv)
 {
 	t_admin	*master;
-	int		stack_len;
 
 	init_admin(&master, remake_args(argc, argv));
 	push_argv_to_stack(master, 'a');
-	get_quartile(master, 'a');
-	stack_len = stacklen(master, 'a');
+	master->arg_cnt = stacklen(master, 'a');
+	get_pivot(master, 'a', master->arg_cnt);
 	if (!is_asc_sorted(master, 'a'))
 	{
-		if (stack_len <= 6)
+		if (master->arg_cnt <= 6)
 			sort_6_or_less(master, 'a', 'b');
 		else
-			sort_quarter(master, 'a', 'b');
+			sort_all(master, 'a', 'b');
 	}
 	admin_free(master);
 }

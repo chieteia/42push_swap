@@ -16,10 +16,10 @@ int	max(int a, int b)
 		return (a);
 }
 
-int	approx_sqrt(int n)
+int	approx_sqrt(double n)
 {
-	int	i;
-	int	j;
+	double	i;
+	double	j;
 
 	i = 0;
 	j = 0;
@@ -28,8 +28,8 @@ int	approx_sqrt(int n)
 		j = i;
 		i++;
 	}
-	if (2 * n < i * i + j * j)
-		return (j);
+	if ((i + j) * (i + j) <= 4 * n)
+		return ((int)i);
 	else
-		return (i);
+		return ((int)j);
 }

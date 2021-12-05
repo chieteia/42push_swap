@@ -57,8 +57,8 @@ void	sort_asc_len5(t_admin *master, char src_name, char dst_name)
 		sort_asc_len3(master, src_name);
 		return ;
 	}
-	rot_cnt = find_rot_cnt_from_top(master, src_name, HALF_FIRST);
-	rrot_cnt = find_rrot_cnt_from_end(master, src_name, HALF_FIRST);
+	rot_cnt = find_rot_cnt_from_top(master, src_name, 0);
+	rrot_cnt = find_rrot_cnt_from_end(master, src_name, 0);
 	if (rot_cnt < rrot_cnt)
 		exec_loop(master, ROTATE, src_name, rot_cnt);
 	else
@@ -79,8 +79,8 @@ void	sort_asc_len6(t_admin *master, char src_name, char dst_name)
 		sort_asc_len3(master, src_name);
 		return ;
 	}
-	rot_cnt = find_rot_cnt_from_top(master, src_name, HALF_FIRST);
-	rrot_cnt = find_rrot_cnt_from_end(master, src_name, HALF_FIRST);
+	rot_cnt = find_rot_cnt_from_top(master, src_name, 0);
+	rrot_cnt = find_rrot_cnt_from_end(master, src_name, 0);
 	if (rot_cnt < rrot_cnt)
 		exec_loop(master, ROTATE, src_name, rot_cnt);
 	else

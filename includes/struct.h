@@ -20,6 +20,7 @@ typedef struct s_admin
 	struct s_stack	*stack_a;
 	struct s_stack	*stack_b;
 	struct s_args	args;
+	int				arg_cnt;
 	int				stack_a_len;
 	int				stack_b_len;
 	int				smallest_rot_flag;
@@ -31,6 +32,8 @@ typedef struct s_admin
 	int				first_quartile;
 	int				median;
 	int				third_quartile;
+	int				*partitions;
+	int				div_num;
 }				t_admin;
 
 #endif

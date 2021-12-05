@@ -22,6 +22,7 @@ void	init_admin(t_admin **master, t_args arg)
 	(*master)->stack_a = NULL;
 	(*master)->stack_b = NULL;
 	(*master)->args = arg;
+	(*master)->arg_cnt = 0;
 	(*master)->stack_a_len = 0;
 	(*master)->stack_b_len = 0;
 	(*master)->smallest_rot_flag = 0;
@@ -33,4 +34,6 @@ void	init_admin(t_admin **master, t_args arg)
 	(*master)->first_quartile = 0;
 	(*master)->median = 0;
 	(*master)->third_quartile = 0;
+	(*master)->partitions = NULL;
+	(*master)->div_num = 0;
 }

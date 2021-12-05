@@ -23,6 +23,8 @@ static int	ft_isnumber(char *str)
 {
 	if (!(str && *str))
 		return (FALSE);
+	if (*str == '-')
+		str++;
 	while (*str)
 	{
 		if (!ft_isdigit(*str))
@@ -57,8 +59,6 @@ static void	chack_argv(t_admin *master, char stack_name)
 	while (index < master->args.cnt)
 	{
 		argv = master->args.vec[index++];
-		if (*argv == '-' && !ft_isdigit(*(++argv)))
-			error_exit();
 		if (!ft_isnumber(argv))
 			error_exit();
 		if (ft_is_overflow(argv))
