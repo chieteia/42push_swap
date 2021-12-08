@@ -2,8 +2,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int			minus;
-	long		number;
+	long long	minus;
+	long long	number;
 
 	number = 0;
 	minus = 0;
@@ -14,7 +14,7 @@ int	ft_atoi(const char *str)
 	while ('0' <= *str && *str <= '9')
 	{
 		number = 10 * number + (*str++ - '0');
-		if (number < LONG_MIN || LONG_MAX < number)
+		if (INT_MAX + minus < number)
 		{
 			if (minus)
 				number = 0;

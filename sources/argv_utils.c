@@ -38,7 +38,7 @@ static int	ft_is_overflow(char *num)
 {
 	int	digits;
 
-	digits = (int)ft_strlen(num);
+	digits = (int)ft_strlen(num) - (*num == '-');
 	if (digits > INT_MAX_DIGIT)
 		return (TRUE);
 	else if (digits == INT_MAX_DIGIT)
