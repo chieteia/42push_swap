@@ -1,7 +1,7 @@
 PUSH_SWAP	=	push_swap
 CHECKER		=	checker
 CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -g
 INCLUDES	=	$(addprefix -I, $(HEADERS))
 HEADERS		=	$(INC_DIR)includes/ $(LIB_DIR)includes/
 LIBFT		=	$(LIB_DIR)libft.a
@@ -18,17 +18,13 @@ SRCS_FILES	=	checker.c \
 				exec_utils.c \
 				find_rot_cnt.c \
 				find_utils.c \
-				get_quartile.c \
+				get_pivot.c \
 				init_utils.c \
 				is_sorted_utils.c \
 				math_utils.c \
-				move_node_to_end.c \
 				plug_utils.c \
-				push_half.c \
-				push_quarter.c \
 				push_utils.c \
 				quick_sort.c \
-				range.c \
 				remake_args.c \
 				reverse_rotate_utils.c \
 				rotate_utils.c \
@@ -36,8 +32,7 @@ SRCS_FILES	=	checker.c \
 				sort_6_or_less.c \
 				sort_asc.c \
 				sort_desc.c \
-				sort_half.c \
-				sort_quarter.c \
+				sort_longer.c \
 				stack_utils.c \
 				swap_utils.c
 

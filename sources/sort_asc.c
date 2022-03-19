@@ -48,44 +48,16 @@ void	sort_asc_len4(t_admin *master, char src_name, char dst_name)
 
 void	sort_asc_len5(t_admin *master, char src_name, char dst_name)
 {
-	int	rot_cnt;
-	int	rrot_cnt;
-
-	if (stacklen(master, src_name) == 3)
-	{
-		sort_desc_len2(master, dst_name);
-		sort_asc_len3(master, src_name);
-		return ;
-	}
-	rot_cnt = find_rot_cnt_from_top(master, src_name, 0);
-	rrot_cnt = find_rrot_cnt_from_end(master, src_name, 0);
-	if (rot_cnt < rrot_cnt)
-		exec_loop(master, ROTATE, src_name, rot_cnt);
-	else
-		exec_loop(master, RROTATE, src_name, rrot_cnt);
-	exec_push(master, dst_name, PRINT_OK);
-	sort_asc_len5(master, src_name, dst_name);
-	exec_push(master, src_name, PRINT_OK);
+	push_pivot_base(master, 'a', 'b');
+	sort_desc_len3(master, dst_name);
+	sort_asc_len3(master, src_name);
+	exec_loop(master, PUSH, 'a', 2);
 }
 
 void	sort_asc_len6(t_admin *master, char src_name, char dst_name)
 {
-	int	rot_cnt;
-	int	rrot_cnt;
-
-	if (stacklen(master, src_name) == 3)
-	{
-		sort_desc_len3(master, dst_name);
-		sort_asc_len3(master, src_name);
-		return ;
-	}
-	rot_cnt = find_rot_cnt_from_top(master, src_name, 0);
-	rrot_cnt = find_rrot_cnt_from_end(master, src_name, 0);
-	if (rot_cnt < rrot_cnt)
-		exec_loop(master, ROTATE, src_name, rot_cnt);
-	else
-		exec_loop(master, RROTATE, src_name, rrot_cnt);
-	exec_push(master, dst_name, PRINT_OK);
-	sort_asc_len6(master, src_name, dst_name);
-	exec_push(master, src_name, PRINT_OK);
+	push_pivot_base(master, 'a', 'b');
+	sort_desc_len3(master, dst_name);
+	sort_asc_len3(master, src_name);
+	exec_loop(master, PUSH, 'a', 3);
 }

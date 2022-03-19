@@ -32,7 +32,6 @@ typedef struct s_admin
 	int				first_quartile;
 	int				median;
 	int				third_quartile;
-	int				*partitions;
 	int				div_num;
 }				t_admin;
 

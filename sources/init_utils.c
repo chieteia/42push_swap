@@ -34,6 +34,5 @@ void	init_admin(t_admin **master, t_args arg)
 	(*master)->first_quartile = 0;
 	(*master)->median = 0;
 	(*master)->third_quartile = 0;
-	(*master)->partitions = NULL;
 	(*master)->div_num = 0;
 }

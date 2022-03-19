@@ -65,8 +65,7 @@ int		find_rrot_cnt_to_end(t_admin *master, t_stack *node, char stack_name);
 int		find_rot_cnt_from_top(t_admin *master, char stack_name, int l);
 int		find_rrot_cnt_from_end(t_admin *master, char stack_name, int l);
 
-void	get_quartile(t_admin *master, char stack_name);
-void	get_pivot(t_admin *master, char stack_name, int stack_len);
+int		get_pivot(t_admin *master, char stack_name, int stack_len);
 
 void	init_stack(t_admin *master, int num, char stack_name);
 void	init_admin(t_admin **master, t_args arg);
@@ -76,26 +75,12 @@ int		is_desc_sorted(t_admin *master, char stack_name);
 
 int		min(int a, int b);
 int		max(int a, int b);
-int		approx_sqrt(double n);
-
-void	move_node_to_end(t_admin *master, t_stack *node, char stack_name);
 
 t_stack	*plug_top_ptr(t_admin *master, char stack_name);
 t_stack	*plug_end_ptr(t_admin *master, char stack_name);
 int		plug_stack_len(t_admin *master, char stack_name);
 
-void	push_first_chunk_half(t_admin *master, char src_name, char dst_name);
-void	push_second_chunk_half(t_admin *master, char src_name, char dst_name);
-
-void	push_first_chunk(t_admin *master, char src_name, char dst_name);
-void	push_second_chunk(t_admin *master, char src_name, char dst_name);
-void	push_third_chunk(t_admin *master, char src_name, char dst_name);
-void	push_fourth_chunk(t_admin *master, char src_name, char dst_name);
-
 void	quick_sort(int *array, int left, int right);
-
-int		get_range_half(t_admin *master, char src_name, int chunk);
-int		get_range_quarter(t_admin *master, char src_name, int chunk);
 
 void	sort_6_or_less(t_admin *master, char src_name, char dst_name);
 
@@ -108,20 +93,12 @@ void	sort_asc_len6(t_admin *master, char src_name, char dst_name);
 void	sort_desc_len2(t_admin *master, char stack_name);
 void	sort_desc_len3(t_admin *master, char stack_name);
 
-void	sort_half(t_admin *master, char src_name, char dst_name);
-void	sort_first_chunk_half(t_admin *master, char src_name, char dst_name);
-void	sort_second_chunk_half(t_admin *master, char src_name, char dst_name);
-
-void	sort_all(t_admin *master, char src_name, char dst_name);
-//void	sort_quarter(t_admin *master, char src_name, char dst_name);
-//void	sort_first_chunk(t_admin *master, char src_name, char dst_name);
-//void	sort_second_chunk(t_admin *master, char src_name, char dst_name);
-//void	sort_third_chunk(t_admin *master, char src_name, char dst_name);
-//void	sort_fourth_chunk(t_admin *master, char src_name, char dst_name);
+int		push_pivot_base(t_admin *master, char src_name, char dst_name);
+void	sort_longer(t_admin *master, char src_name, char dst_name, int flag);
 
 void	push_top(t_admin *master, int num, char stack_name);
 void	push_end(t_admin *master, int num, char stack_name);
 void	pop_top(t_admin *master, char stack_name);
 int		stacklen(t_admin *master, char stack_name);
 
-#endif /* PUSH_SWAP_H */
+#endif
